@@ -1,0 +1,599 @@
+html{
+  line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/* setting the defaults for the file for typographic properties */
+html {
+  font-size: 125%;
+  font-family: 'Lato', sans-serif;
+}
+
+/* eliminating all default margin/padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+/* removing all underlines from links */
+a {
+  text-decoration: none;
+}
+
+/* flex parent declaration */
+header nav,
+header ul,
+section,
+.inner-wrap-flex,
+.blog-title-container,
+.blog-container,
+.blog-cycle,
+.adventure,
+.adventure-gallery,
+.shop-container,
+.text-col,
+form[name="contact-us"],
+.footer-container {
+  display: flex;
+}
+
+/* Flex column parents */
+.inner-wrap-flex,
+.blog-title-container,
+.blog-cycle, 
+.text-col {
+  flex-direction: column;
+}
+
+/* styling the elements that use non-default font-family */
+h1,
+h3,
+.logo {
+  font-family: 'Sirin Stencil', sans-serif;
+  text-transform: uppercase;
+  color: #00476A;
+}
+
+/* assigning font-size for all elements at 1.25rem */
+header ul,
+.button {
+  font-size: 1.25rem; /* this should be 25px */
+}
+
+/* assigning font-size for all elements at 1.5rem */
+h2,
+form[name="contact-us"] input,
+form[name="contact-us"] textarea {
+  font-size: 1.5rem; /* this should be 30px */
+}
+
+/* assigning font-size for all elements at 2rem */
+h3,
+footer .logo,
+footer {
+  font-size: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+
+/* setting white color on applicable text */
+/* .adventure-gallery a, */
+.adventure-gallery h4,
+.contact h3,
+form[name="contact-us"] input,
+form[name="contact-us"] textarea,
+::placeholder,
+footer .logo,
+footer {
+  color: white;
+}
+
+/* removing list-style from all lists */
+ul {
+  list-style: none;
+}
+
+/* styling for all buttons on the page */
+.button {
+  border: 3px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  padding: 15px 25px;
+
+  color: white;
+  background-color: #00476A;
+  text-decoration: none;
+}
+
+.button:hover {
+  border: 3px solid #00C6FF;
+  background-color: white;
+  color: #00476A;
+}
+
+/* header rules */
+
+header {
+  /* sizing */
+  height: 100vh;
+  width: 100%;
+
+  /* hero image */
+  background-image: url("./Assets/header-image.jpg");
+  background-size: cover;
+  background-position: 40% top;
+  transition: all linear .5s;
+}
+
+header nav {
+  margin: 20px 0;
+
+  /* flex parent  */
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  /* flex child  */
+  flex-grow: 1;
+}
+
+header .logo-link {
+  font-size: 1.75rem;
+  color: #222428;
+}
+
+header li a {
+  /* box dimensions */
+  margin: 0 20px;
+  padding: 5px 5px;
+
+  color: #00476A;
+}
+
+header li a:hover {
+  border-bottom: 3px solid #00C6FF
+}
+
+h1 {
+  /* sizing */
+  width: 60%;
+  font-size: 3.75rem; /* this should be 75px */
+  transition: all linear .5s;
+}
+
+section {
+  padding: 100px 0;
+}
+
+.inner-wrap-flex {
+  /* flex parent properties */
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.blog-title-container {
+  align-items: center;
+}
+
+h2 {
+  padding: 10px 0;
+  /* inherits text-align: center from .inner-wrap-flex */
+  letter-spacing: 1px;
+}
+
+/* blue underline unerneath 'Latest blog posts' */
+.underline {
+  height: 10px;
+  width: 100px;
+  border-bottom: 3px solid #00C6FF;
+}
+
+.blog-container {
+  /* flex parent */
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.blog-cycle {
+  /* flex-parent */
+  align-items: center;
+  width: 85%;
+}
+
+.blog-preview {
+  width: 90%;
+  line-height: 1.8;
+}
+
+h3 {
+  margin: 20px 0;
+}
+
+.blog-heading {
+  width: calc(420px + 10%);
+  max-width: 90%;
+}
+
+.blog-container a,
+.blog-cycle p {
+  margin: 20px 0;
+}
+
+/* styles the font awesome arrows */
+.arrow {
+  padding-top: 80px;
+  color: #222428;
+  font-size: 4rem;
+}
+
+.adventures {
+  background-color: #E6F7FB;
+}
+
+.adventure-gallery {
+  width: 100%;
+  margin: 20px 0 200px 0;
+  
+  /* flex parent */
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  list-style: none;
+}
+
+.adventure-gallery li {
+  position: relative;
+  margin: 50px 0;
+}
+
+/* controls sizing of the adventure images */
+.image-1-container,
+.image-2-container,
+.image-3-container {
+  max-width: 400px;
+  max-height: 400px;
+  width: calc((95vw / 3) - 20px);
+  height: calc((95vw / 3) - 20px);
+  min-width: 350px;
+  min-height: 350px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* sets base size and fit for all adventure images */
+.adventure-gallery img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* specific framing for image 1 */
+.image-1-container img{
+  object-fit: none;
+  transform: scale(1.05);
+  object-position: 39% 75%;
+}
+
+/* specific framing for image 2 */
+.image-2-container img {
+  object-position: center 3%;
+}
+
+/* specific framing for image 3 */
+.image-3-container img {
+  transform: scale(1.5);
+  object-position: center center;
+}
+
+.adventure-gallery h4 {
+  /* positioning and size */
+  position: absolute;
+  bottom: 60px;
+  left: -20px;
+  width: 56%;
+  padding: 15px 0;
+
+  /* typography */
+  font-size: 1.4rem; /* 28px */
+  letter-spacing: 2px;
+  background-color: #222428;
+  text-transform: uppercase;
+}
+
+.shop-container {
+  /* flex parent */
+  justify-content: space-between;
+  position: relative;
+}
+
+.img-col,
+.text-col {
+  width: calc((100% / 2) - 50px);
+  height: 100%;
+}
+
+.text-col {
+  /* flex parent */
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  padding-left: 50px;
+  line-height: 1.8;
+}
+
+.text-col a {
+  margin: 50px 0;
+  padding: 10px 40px;
+}
+
+.img-col img {
+  /* positioning and size */
+  position: relative;
+  top: -250px;
+  left: -20px;
+  width: 100%;
+
+  box-shadow: 60px 60px #B1E4ED;
+}
+
+.contact {
+  background-color: #222428;
+}
+
+.contact h3 {
+  text-align: center;
+}
+
+form[name="contact-us"] {
+  /* flex parent */
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+form[name="contact-us"] input,
+form[name="contact-us"] textarea {
+  /* positioning and sizing */
+  margin: 20px 0;
+  border: 3px solid #00C6FF;
+  padding: 30px;
+  height: 100px;
+  width: calc((100% / 2) - 20px);
+  min-width: 300px;
+
+  background-color: rgba(34, 36, 40, 0);
+  font-family: 'Lato', sans-serif;
+}
+
+form[name="contact-us"] textarea {
+  min-width: 100%;
+  height: 250px;
+  
+  /* flex child */
+  flex-grow: 1;
+}
+
+form[name="contact-us"] button {
+  margin: 20px auto;
+  /* flex child */
+  justify-self: center;
+}
+
+::placeholder {
+  opacity: 1;
+}
+
+button[type="submit"] {
+  padding: 15px 40px;
+}
+
+/* footer rules */
+
+footer {
+  background-color: #0E191E;
+}
+
+.footer-container {
+  padding: 40px 0;
+
+  /* flex parent */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.made-at-juno, 
+footer .logo, 
+.footer-placeholder {
+  width: calc(100% / 3);
+}
+
+.made-at-juno {
+  font-size: 1rem;
+  text-align: right;
+}
+
+.made-at-juno a {
+  color: #ea593e;
+}
+
+@media (max-width: 940px) {
+  .wrapper {
+    width: 90%;
+  }
+
+  /* Flex-direction changes */
+  header nav,
+  .shop-container,
+  .footer-container {
+    flex-direction: column;
+  }
+
+  section {
+    padding: 50px 0;
+  }
+
+  header {
+    background-position: 35% 0%;
+  }
+
+  header .logo {
+    align-self: flex-start;
+  }
+
+  header ul {
+    margin-top: 20px;
+  }
+
+  .shop {
+    padding: 0;
+  }
+
+  .image-1-container,
+  .image-2-container,
+  .image-3-container {
+    max-width: 600px;
+    max-height: 600px;
+    width: calc(95vw -20px);
+    height: calc(95vw -20px);
+  }
+
+  .shop-container {
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .img-col {
+    position: relative;
+    width: 80%;
+    height: 100%;
+  }
+
+  .img-col img {
+    /* positioning and size */
+    position: relative;
+    top: -100px;
+    left: 0;
+  
+    box-shadow: 40px 40px #B1E4ED;
+    transition: all linear .5s;
+  }
+
+  .text-col {
+    margin: 0 auto;
+    padding: 0;
+    width: 80%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-col h3 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .made-at-juno {
+    text-align: center;
+  }
+  
+  .footer-placeholder,
+  footer .logo,
+  .made-at-juno {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 75vh;
+    background-position: 25% 0;
+  }
+  
+  .blog {
+    height: 100vh;
+  }
+
+  .blog-container {
+    flex-wrap: wrap;
+  }
+
+  .fas {
+    padding-top: 0;
+  }
+
+  .blog-cycle {
+    width: 100%;
+    order: -1;
+  }
+
+  .adventure-gallery h4 {
+    /* positioning and size */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 70%;
+    margin: 0 auto;
+    transition: all ease-out .5s;
+  }
+
+  form[name="contact-us"] {
+    width: 90%;
+    margin: 0 auto;
+
+    /* flex parent */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form[name="contact-us"] input,
+  form[name="contact-us"] textarea {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 480px) {
+  header {
+    height: 50vh;
+    background-position: 20% 0%;
+  }
+
+  header li a {
+    color: #00476a00;
+    display: none;
+  }
+
+  h1 {
+    margin-bottom: 60px;
+    font-size: 2.5rem;
+  }
+
+  .img-col img {
+    box-shadow: 30px 30px #B1E4ED;
+  }
+}

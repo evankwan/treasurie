@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teasurie</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Sirin+Stencil&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/7627ee882a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="wrapper">
+
+      <nav>
+        <!-- Top nav logo -->
+        <p class="logo"><a href="#" class="logo-link">Treasures</a></p>
+
+         <!-- Top nav links -->
+        <ul>
+          <!-- I chose not to have these links go to any anchors on the page except for the contact form -->
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main title -->
+      <h1>Worldly Teasures Worth The Peak</h1>
+      <a href="#" class="button">Shop now</a>
+
+    </div> <!-- End of wrapper -->
+  </header>
+
+  <main>
+    <!-- Blog -->
+    <section class="blog">
+      <div class="wrapper inner-wrap-flex">
+
+        <div class="blog-title-container">
+          <h2>Latest blog posts</h2>
+          <div class="underline"></div>
+        </div>
+
+        <div class="blog-container">
+          <!-- Left arrow -->
+          <a href="#"><i class="arrow fas fa-chevron-left"></i></a>
+
+          <!-- Blog content -->
+          <div class="blog-cycle">
+            <h3 class="blog-heading">Our Journey To Greece and Morocco</h3>
+            <div class="blog-preview">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias libero, suscipit commodi nulla fugit optio autem maiores vel aliquam voluptas, corporis voluptates porro odit iure. Repudiandae nulla eveniet vitae magni?</p>   
+            </div>                   
+          </div>
+
+          <!-- Right arrow -->
+          <a href="#"><i class="arrow fas fa-chevron-right"></i></a>         
+        </div>
+
+        <a href="#" class="button">Learn more</a>
+
+      </div> <!-- End of wrapper -->
+    </section>
+
+    <!-- Adventures -->
+    <section class="adventures">
+      <div class="wrapper inner-wrap-flex">
+
+        <h3>Latest adventures</h3>
+        <ul class="adventure-gallery">
+          <!-- First adventure pic -->
+          <li>
+            <a href="#">
+              <div class="image-1-container">
+                <img src="./Assets/turkey.jpg" alt="hot balloons in the air in Turkey">
+              </div>
+              <h4>Turkey</h4>
+            </a>
+          </li>
+          <!-- Second adventure pic -->
+          <li>
+            <a href="#">
+              <div class="image-2-container">
+                <img src="./Assets/morocco.jpg" alt="an empty street with stairs in Morocco">
+              </div>              
+              <h4>Morocco</h4>
+            </a>
+          </li>         
+          <!-- Third adventure pic -->
+          <li>
+            <a href="#">
+              <div class="image-3-container">
+                <img src="./Assets/senegal.jpg" alt="an empty street between houses in Senegal">
+              </div>
+              <h4>Senegal</h4>
+            </a>
+          </li>
+        </ul>      
+
+      </div> <!-- End of wrapper -->
+    </section>
+
+    <!-- Shop -->
+    <section class="shop">
+      <div class="wrapper shop-container">
+
+        <!-- Shop image -->
+        <div class="img-col">
+          <img src="./Assets/blue-vase.jpg" alt="a white chinese vase with a blue dragon pattern">
+        </div>
+
+        <!-- Shop text -->
+        <div class="text-col">
+          <h3>Beautiful blue dragon vase</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae doloremque eos dolor ipsum quos ipsam porro consectetur magni excepturi, ducimus rem, culpa aut cum beatae amet saepe unde aliquid ullam sunt libero fuga delectus molestiae quaerat. Labore nisi, debitis odit hic iste, quae nemo quisquam ipsa est, libero quaerat quas?</p>
+          <a href="#" class="button">Shop now</a>
+        </div>
+
+      </div> <!-- End of wrapper -->
+    </section>
+
+    <!-- Contact form -->
+    <section id="contact" class="contact">
+      <div class="wrapper">
+
+        <h3>Contact us</h3>
+        <form action="sendEmail.php" method="POST" name="contact-us">
+
+          <!-- Contact name field -->
+          <label for="contact-name" class="sr-only">Name</label>
+          <input type="text" name="contact-name" id="contact-name" placeholder="Name">
+          
+          <!-- Contact email field -->
+          <label for="contact-email" class="sr-only">Email</label>
+          <input type="email" name="contact-email" id="contact-email" placeholder="Email">
+          
+          <!-- Contact message field -->
+          <label for="contact-message" class="sr-only">Message</label>
+          <textarea name="contact-message" id="contact-message" placeholder="Message"></textarea>
+
+          <button type="submit" class="button">Submit</button>
+        
+        </form>
+
+      </div> <!-- End of wrapper -->
+    </section>
+
+    <footer>
+      <div class="wrapper footer-container">
+        <!-- Empty div used for even spacing and placeholder for future content -->
+        <div class="footer-placeholder"></div>
+
+        <!-- Footer logo -->
+        <p><a href="#" class="logo">Treasures</a></p>
+
+        <!-- Made at Juno signature -->
+        <p class="made-at-juno">Made at <a href="https://junocollege.com/" rel="noopener" target="_blank" class="made-at-juno">Juno College</a></p>
+        
+      </div> <!-- End of wrapper -->
+    </footer>
+    
+  </main>
+</body>
+</html>
